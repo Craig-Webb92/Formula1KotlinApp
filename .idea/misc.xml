@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/git/Formula1KotlinApp/app/src/main/res/layout/fragment_gallery.xml" value="0.2303206997084548" />
         <entry key="..\:/git/Formula1KotlinApp/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/git/Formula1KotlinApp/app/src/main/res/layout/fragment_slideshow.xml" value="0.33" />
         <entry key="..\:/git/Formula1KotlinApp/app/src/main/res/layout/nav_header_main.xml" value="0.16084093211752787" />
       </map>
     </option>

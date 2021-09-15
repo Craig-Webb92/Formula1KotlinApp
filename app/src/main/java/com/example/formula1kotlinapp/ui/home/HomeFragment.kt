@@ -103,7 +103,7 @@ class HomeFragment : Fragment() {
         val countdownText: TextView = view.findViewById(R.id.countdown_text)
         // Set Current Date
         val currentDate = Calendar.getInstance()
-        // println(currentDate)
+
         // Set Event Date
         val eventDate = Calendar.getInstance()
         eventDate[Calendar.YEAR] = date[0].toInt()
@@ -112,14 +112,13 @@ class HomeFragment : Fragment() {
         eventDate[Calendar.HOUR_OF_DAY] = time[0].toInt() - 1 // 0-23
         eventDate[Calendar.MINUTE] = time[1].toInt()
         eventDate[Calendar.SECOND] = 0
-        eventDate.timeZone = TimeZone.getTimeZone("GMT")
+        eventDate.timeZone = TimeZone.getDefault()
+        // Get the timezone, and the offset to apply to the countdown
         var timeZone = TimeZone.getDefault()
         var timeZoneOffset = timeZone.getOffset(eventDate.timeInMillis)
 
-        //  println("HELP: " + eventDate)
         // Find how many milliseconds until the event
         val diff = (eventDate.timeInMillis + timeZoneOffset) - currentDate.timeInMillis
-        //   println("diff: " + diff)
         // Change the milliseconds to days, hours, minutes and seconds
         val days = (diff / (24 * 60 * 60 * 1000))
         val hours = (diff / (1000 * 60 * 60) % 24)
